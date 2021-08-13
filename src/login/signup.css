@@ -1,0 +1,16 @@
+.jlogin
+{
+    width:50%;
+    margin: auto;
+    background: linear-gradient(to bottom, #660066 0%, #ff0066 100%);;
+}
+
+.btlogin
+{
+    width:50%;
+    border: 3px solid rgb(119, 28, 28);
+    padding: 10px;
+}
+.btlogin:hover{
+    background-color:rgb(119, 28, 28);
+}

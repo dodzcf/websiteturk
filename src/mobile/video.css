@@ -1,0 +1,18 @@
+
+*{
+    margin: 0;
+    padding: 0;
+   }
+.bodyy
+{
+    background-image: url(https://image.freepik.com/free-vector/minimalist-shape-background_112769-210.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+}
+
+.lang
+{
+    height: 50px;
+}

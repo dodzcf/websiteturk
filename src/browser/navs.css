@@ -1,0 +1,30 @@
+.nabd
+{
+    background: linear-gradient(110deg, #4b0505 40%, #095a01 60%);
+    
+}
+.abc
+{
+    border-radius: 80%;
+    width: 3%;
+}
+.logop
+{
+    font-family: 'Metal Mania';
+    font-size: 100%;
+    font-weight: bold;
+    color: maroon;
+    box-sizing: content-box;
+    font-size: 20px;
+    margin: 0;
+    position: auto;
+    z-index: 3;
+    padding: 10px;
+    background-color: #060C1F;
+    color: rgb(165, 9, 9);
+    border-radius: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

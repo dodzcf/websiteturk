@@ -1,0 +1,86 @@
+.jj
+{
+    background-color: black;
+}
+.btnn
+{
+    width: 60px;
+    height: 100px;
+    /* background-color: #fafafa; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 19px;
+}
+i.fa
+{
+    font-size: 44px;
+}
+#fb
+{
+    color: #006fff;
+    text-shadow: 0 0 30px #006fff;
+}
+#ig
+{
+    color: #ff5f40;
+    text-shadow: 0 0 30px #ff5f40;
+}
+#tw
+{
+    color: #00acff;
+    text-shadow: 0 0 30px #00acff;
+}
+#wa
+{
+    color: #00ff88;
+    text-shadow: 0 0 30px #00acff;
+}
+.btnn.fb-btn
+{
+    box-shadow: 0 20px 20px -17px rgba(0,111,255,0.53);
+}
+.btnn.fb-btn:hover
+{
+    transform: scale(1.2);
+    box-shadow: 0 30px 45px -15px rgba(0,111,255,0.65);
+}
+.btnn.ig-btn
+{
+    box-shadow: 0 20px 20px -17px rgba(255,16,39,0.5);
+}
+.btnn.ig-btn:hover
+{
+    transform: scale(1.2);
+    box-shadow: 0 30px 45px -15px rgba(255,16,39,0.57);
+}
+.btnn.tw-btn
+{
+    box-shadow: 0 20px 20px -17px rgba(0,255,255,0.53);
+}
+.btnn.tw-btn:hover
+{
+    transform: scale(1.2);
+    box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
+}
+
+.btnn.wa-btn
+{
+    box-shadow: 0 20px 20px -17px rgba(0, 243, 73, 0.53);
+}
+
+.btnn.wa-btn:hover
+{
+    transform: scale(1.2);
+    box-shadow: 0 30px 45px -15px rgba(0, 255, 55, 0.795);
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}

@@ -1,0 +1,17 @@
+.roww {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 31;
+    gap: 2.5%;
+    /* width: 100%; */
+  }
+  
+.coll {
+    display: table-cell;
+    background-color: rgb(211, 219, 221);
+    align-items: center;
+    /* width: 90%; */
+    border-radius: 3%;
+    background-image: url(https://media1.giphy.com/media/l0GRk3KHYv2W6hmJG/giphy.gif);
+    
+  } 
