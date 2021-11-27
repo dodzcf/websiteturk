@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/websiteturk/static/css/main.c30b5ccb.chunk.css",
-    "main.js": "/websiteturk/static/js/main.bc1caeac.chunk.js",
-    "main.js.map": "/websiteturk/static/js/main.bc1caeac.chunk.js.map",
-    "runtime-main.js": "/websiteturk/static/js/runtime-main.85ebe01e.js",
-    "runtime-main.js.map": "/websiteturk/static/js/runtime-main.85ebe01e.js.map",
-    "static/css/2.d0cac18f.chunk.css": "/websiteturk/static/css/2.d0cac18f.chunk.css",
-    "static/js/2.ddab8f60.chunk.js": "/websiteturk/static/js/2.ddab8f60.chunk.js",
-    "static/js/2.ddab8f60.chunk.js.map": "/websiteturk/static/js/2.ddab8f60.chunk.js.map",
-    "index.html": "/websiteturk/index.html",
-    "static/css/2.d0cac18f.chunk.css.map": "/websiteturk/static/css/2.d0cac18f.chunk.css.map",
-    "static/css/main.c30b5ccb.chunk.css.map": "/websiteturk/static/css/main.c30b5ccb.chunk.css.map",
-    "static/js/2.ddab8f60.chunk.js.LICENSE.txt": "/websiteturk/static/js/2.ddab8f60.chunk.js.LICENSE.txt",
-    "static/media/cert.4338012b.PNG": "/websiteturk/static/media/cert.4338012b.PNG",
-    "static/media/logo.38a0a6a9.jpeg": "/websiteturk/static/media/logo.38a0a6a9.jpeg"
+    "main.css": "/dannylingual/static/css/main.9799ad1f.chunk.css",
+    "main.js": "/dannylingual/static/js/main.2c133ad9.chunk.js",
+    "main.js.map": "/dannylingual/static/js/main.2c133ad9.chunk.js.map",
+    "runtime-main.js": "/dannylingual/static/js/runtime-main.7edf7279.js",
+    "runtime-main.js.map": "/dannylingual/static/js/runtime-main.7edf7279.js.map",
+    "static/css/2.d0cac18f.chunk.css": "/dannylingual/static/css/2.d0cac18f.chunk.css",
+    "static/js/2.17e3e6b2.chunk.js": "/dannylingual/static/js/2.17e3e6b2.chunk.js",
+    "static/js/2.17e3e6b2.chunk.js.map": "/dannylingual/static/js/2.17e3e6b2.chunk.js.map",
+    "index.html": "/dannylingual/index.html",
+    "static/css/2.d0cac18f.chunk.css.map": "/dannylingual/static/css/2.d0cac18f.chunk.css.map",
+    "static/css/main.9799ad1f.chunk.css.map": "/dannylingual/static/css/main.9799ad1f.chunk.css.map",
+    "static/js/2.17e3e6b2.chunk.js.LICENSE.txt": "/dannylingual/static/js/2.17e3e6b2.chunk.js.LICENSE.txt",
+    "static/media/cert.4338012b.PNG": "/dannylingual/static/media/cert.4338012b.PNG",
+    "static/media/logo.38a0a6a9.jpeg": "/dannylingual/static/media/logo.38a0a6a9.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.85ebe01e.js",
+    "static/js/runtime-main.7edf7279.js",
     "static/css/2.d0cac18f.chunk.css",
-    "static/js/2.ddab8f60.chunk.js",
-    "static/css/main.c30b5ccb.chunk.css",
-    "static/js/main.bc1caeac.chunk.js"
+    "static/js/2.17e3e6b2.chunk.js",
+    "static/css/main.9799ad1f.chunk.css",
+    "static/js/main.2c133ad9.chunk.js"
   ]
 }
