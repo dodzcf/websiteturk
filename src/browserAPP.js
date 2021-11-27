@@ -26,7 +26,7 @@ const Routing=()=>{
   
   return (
     <>
-           <Route exact path="/">
+           <Route path="/">
   
   <Scroll showBelow={50} />
     
