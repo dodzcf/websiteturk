@@ -1,99 +1,134 @@
-// import './mobileAPP.css';
-// import React, { Component } from "react";
-// import { NavLink } from 'react-router-dom';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
-// import Intro from './mobile/name';
-// import Social from './mobile/social';
-// import About from './mobile/about'; 
-// import Scroll from './mobile/top'; 
-// import Video from './mobile/video';
-// import Logo from './images/logom.jpeg';
+import './browserAPP.css';
+import React, { useReducer } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import ProtectedRoute from './protectedrouter'
+import Navbar from './browser/navbar';
+import Signin from './signin/signin';
+import Logout from './logout/logout';
+import Signup from './login/signup';
+import Intro from './browser/name';
+import Social from './browser/social';
+import About from './browser/about';
+import Scroll from './mobile/top';
+import Video from './mobile/video';
+import Home from './account/home';
+import Payment from './courses/payment';
+import ForgotPassword from './forgotpassword/forgotpass';
+import Card from './payment/pay';
+import CourseVideo from './coursevideos/coursevideos'
+// export const UserContext=createContext();
 
-
-// function MobileAPP() {
-
-//   return (
-    
-//     <Router>
+const Routing=()=>{
   
-//     <Scroll showBelow={50} />
-//       <>
-//       <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-//   <img src={Logo} class="abc" ></img>
-//   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//     <span class="navbar-toggler-icon"></span>
-//   </button>
+  return (
+    <>
+           <Route exact path="/">
+  
+  <Scroll showBelow={50} />
+    
+    
+    <div className="App">
+      <Switch>
 
-//   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-//     <ul class="navbar-nav">
-//     <li class="nav-item">
-//         <NavLink class="nav-link" to="/" >Home</NavLink>
-//       </li>
-//       <li class="nav-item">
-//         <a class="nav-link" href="#about">About</a>
-//       </li>
-//       <li class="nav-item" >
-//         <a class="nav-link" href="#socialmedia" >Social Media</a>
-//       </li>
-//       <li class="nav-item">
-//         <a class="nav-link disabled" href="../login/signup.js">Login</a>
-//       </li>
-//     </ul>
-//   </div>
-// </nav>
-//       </>
-      
-//       <div className="App">
-//         <Switch>
-//           <Route path="/">
-//           <div id="intro">
-//             <Intro  />
-            
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             </div>
-//             <div id="about">
-//             <About />
-//             <br></br>
-//             <br></br>
-//             <Video />
-//             </div>
-            
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-            
-//             <div id="socialmedia">
-//             <Social />
-            
-//             </div>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             <br></br>
-//             {/* <div class="ocean">
-//             <div class="wave"></div>
-//             <div class="wave"></div>
-//             </div> */}
-//           </Route>
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
+        
+        <Route path="/">
+        <div class="head">
+        <div id="intro">
+          <Intro  />
+          </div>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <div id="about">
+          <About />
+          </div>
+          
+          <div class="header">
+          <br></br>
+          <br></br>
+          
+          <Video />
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <div id="socialmedia">
+          
+          <Social />
+          
+          
+          </div>
+          
+          </div>
+          
+          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          {/* <div class="ocean"> */}
+          {/* <div class="wave"></div> */}
+          {/* <div class="wave"></div> */}
+          {/* </div> */}
+        </Route>
+        
+      </Switch>
+    </div>
+  </Route>
+          <Route exact path="/signin">
+            <Signin/>
+           </Route>
+           <Route exact path="/signup">
+            <Signup/>
+           </Route>
+           <Route exact path="/logout">
+            <Logout/>
+           </Route>
+           <Route exact path="/forgotpassword">
+            <ForgotPassword/>
+           </Route>
+           <ProtectedRoute exact path="/account">
+           <Home/>
+           </ProtectedRoute>
+           <ProtectedRoute exact path="/courses">
+           <Payment/>
+           </ProtectedRoute>
+           <ProtectedRoute exact path="/payment">
+           <Card/>
+           </ProtectedRoute>
+           <ProtectedRoute exact path="/coursevideos">
+           <CourseVideo/>
+           </ProtectedRoute>
+    
+    </>
+  );
+  }
 
-// export default MobileAPP;
+  const MobileApp=() => {
+  
+  
+    return (
+      <>
+    <Route>
+    <Navbar/>
+    </Route>
+    <Routing/>
+    
+    </>
+  );
+}
 
-
+export default MobileApp;

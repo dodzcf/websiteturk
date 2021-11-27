@@ -1,6 +1,6 @@
 {
-  "homepage": "http://dodzcf.github.io/websiteturk/",
   "name": "turk",
+  "homepage": "http://dodzcf.github.io/dannylingual",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,8 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "js-cookie": "^3.0.0",
+    "mkcert": "^1.4.0",
     "react": "^17.0.2",
     "react-credit-cards": "^0.8.3",
     "react-device-detect": "^1.17.0",
@@ -24,6 +26,7 @@
     "react-whatsapp": "^0.2.1",
     "redux": "^4.1.0",
     "store": "^2.0.12",
+    "universal-cookie": "^4.0.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -34,7 +37,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://turkishpassion.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

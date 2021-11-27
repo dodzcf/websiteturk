@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
 import axios from 'axios';
 import './signup.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,7 +11,7 @@ export default class CreateUser extends Component {
 
     constructor(props) {
         super(props)
-
+        
         // const context = useContext(UserContext);
 
         this.onChangeUserName = this.onChangeUserName.bind(this);
@@ -88,7 +88,7 @@ export default class CreateUser extends Component {
         
         try {
             const response = await axios.post(
-              "/signup",
+              "https://turkapi.herokuapp.com/signup",
               userObject 
             );
             if(response.data==="User with this Email already exists")
@@ -104,11 +104,11 @@ export default class CreateUser extends Component {
                 toast.success("Account Created Successfully. Please check your mail to verify your account");
                 const delay = ms => new Promise(res => setTimeout(res, ms));
                 await delay(3000);
-                window.location.href = "/login";
+                // history.push ("/login");
             }
             
           } catch (error) {
-        
+            console.log(error);
           }
         
         

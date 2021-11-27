@@ -9,10 +9,7 @@ import {
   MobileView,
 
 } from "react-device-detect";
-import store from "./store";
-import {Provider} from "react-redux";
 
-store.subscribe(()=>alert(JSON.stringify(store.getState())));
 
 
 ReactDOM.render(
@@ -21,9 +18,7 @@ ReactDOM.render(
   <BrowserRouter>
   
   <BrowserView>
-  <Provider store={store}>
   <BrowserApp/>
-  </Provider>
   {/* <MobileApp/> */}
 </BrowserView>
 <MobileView>

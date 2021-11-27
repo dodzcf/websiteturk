@@ -1,65 +1,62 @@
-import React,{useEffect, useState,Component} from 'react';
-import axios from 'axios';
-import{useHistory,Redirect} from 'react-router-dom'
+import React,{useState} from 'react';
+import{useHistory,Link} from 'react-router-dom'
 import './signin.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import {useSelector, useDispatch} from "react-redux";
-import {inc,dec} from  "../reducer/userReducer";
-import store from "../store";
-
+import axios from 'axios';
 const Signin = ()=>
 {
   localStorage.getItem('jw')
   
+  
+
   const history=useHistory();
-  const myState=useSelector((state)=>state.num);
-  const dispatch = useDispatch();
   const [usernameoremail,setEmail]=useState('');
   const [password,setPassword]=useState('');
 
- 
+  var body = {
+    usernameoremail:usernameoremail,
+    password: password,
+}
 
 const loginuser = async (e)=>
 {
   e.preventDefault();
 
-  const res = await fetch('/signin',
-  {
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      usernameoremail,
-      password,
-    })
-  });
+    const res = await axios.post(
+      "https://turkapi.herokuapp.com/signin",
+      body,
+    )
 
-  if(res.status===404)
+
+
+
+
+try{
+  if(res.data==="No Account with this email or username")
   {
-    toast.warn("No User with this email");
+    toast.warn("No User with this email or username");
+    return;
   }
-  if(res.status===403)
-  {
-    toast.warn("No User with this username");
-  }
-  if(res.status===405)
-  {
-    toast.warn("Invalid Password");
-  }
-  
-  if(res.status===200)
+  else if(res.data==="Account Not Verified")
   {
     toast.warn("Account Not Verified");
   }
-  if(res.status===400)
+  else if(res.data==="Wrong Password")
+  {
+    toast.warn("Invalid Password");
+  }
+  else
   {
     localStorage.setItem('jw',0);
-    window.location.href="/account/home";
-    
+    localStorage.setItem('token',res.data);
+    console.log(JSON.stringify(localStorage.getItem('id')));
+    window.location.href="/";
   }
+}
+catch{
+  alert("sorry");
+}
 
 
 }
@@ -86,7 +83,7 @@ const loginuser = async (e)=>
           />
         </div>
         <div>
-        <a href="../forgotpassword/forgotpass">Forgot Password?</a>
+        <Link to="/forgotpassword">Forgot Password?</Link>
         </div>
         <br></br>
         <input type="submit" class="btn btn-primary" value="Log In"

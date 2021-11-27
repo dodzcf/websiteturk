@@ -1,21 +1,17 @@
-import React,{useEffect, useState,Component} from 'react';
-import axios from 'axios';
-import{useHistory,Redirect} from 'react-router-dom'
-// import '../signin.css';
+import React,{useState} from 'react';
+import{useHistory,Link} from 'react-router-dom'
+import '../signin/signin.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import {useSelector, useDispatch} from "react-redux";
-import {inc,dec} from  "../reducer/userReducer";
-import store from "../store";
+import axios from 'axios';
+// import {useSelector, useDispatch} from "react-redux";
 
 const ForgotPassword = ()=>
 {
   localStorage.getItem('jw')
   
   const history=useHistory();
-  const myState=useSelector((state)=>state.num);
-  const dispatch = useDispatch();
+  // const myState=useSelector((state)=>state.num);
   const [usernameoremail,setEmail]=useState('');
 
  
@@ -24,28 +20,28 @@ const loginuser = async (e)=>
 {
   e.preventDefault();
 
-  const res = await fetch('/forgotpassword',
-  {
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      usernameoremail,
-    })
-  });
+  var body = {
+    usernameoremail:usernameoremail,
+}
 
-  if(res.status===404)
+  const res=await axios.post(
+    "https://turkapi.herokuapp.com/forgotpassword",
+    body,
+  );
+
+
+  if(res.data==="No account")
   {
     toast.warn("No User with this email");
   }
-  if(res.status===403)
+  if(res.data==="No account")
   {
     toast.warn("No User with this username");
   }
-  if(res.status===400)
+  if(res.data==="Password Request Sent")
   {
-    window.location.href="";
+    toast.success("Reset link has been sent to your email address");
+    // history.push("/");
     
   }
 

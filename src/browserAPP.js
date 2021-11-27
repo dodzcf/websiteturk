@@ -26,7 +26,7 @@ const Routing=()=>{
   
   return (
     <>
-           {/* <Route> */}
+           <Route exact path="/">
   
   <Scroll showBelow={50} />
     
@@ -35,7 +35,7 @@ const Routing=()=>{
       <Switch>
 
         
-        <Route exact path="/">
+        <Route path="/">
         <div class="head">
         <div id="intro">
           <Intro  />
@@ -87,29 +87,29 @@ const Routing=()=>{
         
       </Switch>
     </div>
-  {/* </Route> */}
-          <Route exact path="/signin/signin.js">
+  </Route>
+          <Route exact path="/signin">
             <Signin/>
            </Route>
-           <Route path="/login">
+           <Route exact path="/signup">
             <Signup/>
            </Route>
-           <Route path="/logout">
+           <Route exact path="/logout">
             <Logout/>
            </Route>
-           <Route path="/forgotpassword">
+           <Route exact path="/forgotpassword">
             <ForgotPassword/>
            </Route>
-           <ProtectedRoute path="/account">
+           <ProtectedRoute exact path="/account">
            <Home/>
            </ProtectedRoute>
-           <ProtectedRoute path="/courses">
+           <ProtectedRoute exact path="/courses">
            <Payment/>
            </ProtectedRoute>
-           <ProtectedRoute path="/payment">
+           <ProtectedRoute exact path="/payment">
            <Card/>
            </ProtectedRoute>
-           <ProtectedRoute path="/coursevideos">
+           <ProtectedRoute exact path="/coursevideos">
            <CourseVideo/>
            </ProtectedRoute>
     
@@ -125,8 +125,8 @@ const Routing=()=>{
     <Route>
     <Navbar/>
     </Route>
-
     <Routing/>
+    
     </>
   );
 }

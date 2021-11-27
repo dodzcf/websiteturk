@@ -1,7 +1,6 @@
 import React from 'react';
 import './navs.css';
-import Logo from '../images/logo.jpeg';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 
 
 
@@ -23,7 +22,7 @@ var naving=localStorage.getItem('jw');
         <NavLink class="nav-link" to="/" >Home</NavLink>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="../account/home.js">Account</a>
+        <Link class="nav-link" to="/account">Account</Link>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="../coursevideos/coursevideos.js">Videos</a>
@@ -32,7 +31,7 @@ var naving=localStorage.getItem('jw');
         <a class="nav-link disabled" href="../courses/payment.js" disabled>Buy</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../logout/logout.js">Log Out</a>
+        <Link class="nav-link" to="/logout">Log Out</Link>
       </li>
         </>
   
@@ -46,10 +45,10 @@ else{
         <NavLink class="nav-link" to="/" >Home</NavLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../login/signup.js">Sign up</a>
+        <Link class="nav-link" to="/signup">Sign up</Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../signin/signin.js">Log In</a>
+        <Link class="nav-link" to="/signin">Log In</Link>
       </li>
     </>
   )
@@ -73,7 +72,6 @@ else{
 </nav>
 </>
   )
-
-
 }
-export default Navbar
+
+export default Navbar;

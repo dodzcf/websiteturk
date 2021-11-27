@@ -1,41 +1,12 @@
-import React, { useEffect,createContext } from 'react';
-import {useHistory} from 'react-router-dom'
-import {useSelector, useDispatch} from "react-redux";
-import {inc,dec} from  "../reducer/userReducer";
+import React from 'react';
 
 const Logout =()=>
 {
-    var myState=useSelector((state)=>state.num);
-    var dispatch = useDispatch(myState);
-    const history=useHistory();
 
-useEffect(()=>
-{
-fetch('/logout',
-{
-    method:"GET",
-    headers:{
-        Accept:"application/json",
-        "Content-Type":"application/json"
-    },
-    credentials:"include"
-})
-.then((res)=>{
-    
-    if(res.status!==200)
-    {
-        const error=new Error(res.error);
-        throw error;
-    }
-    else{
+
         localStorage.setItem('jw',1);
-    history.push("/");
+        window.location.href="/";
     
-}})
-.catch(err=>{
-    console.log(err);
-})
-});
 
 
 

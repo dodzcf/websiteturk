@@ -1,5 +1,9 @@
 import React,{useState,useEffect} from 'react'
+import { useHistory } from 'react-router';
 import './homeacc.css'
+import axios from 'axios';
+
+
 const Home = ()=>
 {
   const [userName,setUserName]=useState();
@@ -7,21 +11,30 @@ const Home = ()=>
   const [userlname,setlname]=useState();
   const [userEmail,setemail]=useState();
   const [userpaid,setpaid]=useState();
+  const history=useHistory();
+
 
   const data = async ()=>
   {
     
+    const token=localStorage.getItem("token");
+
+
+    var body = {
+      token:token,
+  }
+  
+
+  try{
+      const res = await axios.post(
+        "https://turkapi.herokuapp.com/nav",
+        body,
+      )
+      
     try{
-    const res = await fetch('/nav',
-    {
-      method:"GET",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      credentials:"include"
-    });
-    const userinfo=await res.json();
+ 
     
+    const userinfo=await res.data;
     setUserName(userinfo.username);
     setfname(userinfo.firstname);
     setlname(userinfo.lastname);
@@ -45,12 +58,16 @@ const Home = ()=>
     }
     
     
-  }
+    }
   catch(error)
   {
-    window.location.href="/signin/signin.";
+    history.push("/signin");
   }
-
+  }
+  catch
+  {
+    history.push("/signin");
+  }
   }
 
 
@@ -80,6 +97,7 @@ useEffect(()=>{
     <br></br>
     <br></br>
     <br></br>
+    {/* <div class="container"> */}
     <div class=" jumbotron  text-white flag">
     <br></br>
     <br></br>
@@ -89,6 +107,7 @@ useEffect(()=>{
     <h2 class="d-flex justify-content-center  ">Account Details</h2>
     <br></br>
     <br></br>
+    <div className="container">
             <div class="row">
       		<div class="col-md-6">
           <br></br>
@@ -121,8 +140,8 @@ useEffect(()=>{
 
 
 
-
-
+</div>
+</div>
     </div>  
     </div>
 
@@ -137,7 +156,7 @@ useEffect(()=>{
         
         
         
-        </div>
+        {/* </div> */}
         <br></br>
         <br></br>
         <br></br>
@@ -147,4 +166,4 @@ useEffect(()=>{
   
 }
 
-export default Home
+export default Home;
