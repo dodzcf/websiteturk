@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/websiteturk/static/css/main.9799ad1f.chunk.css",
-    "main.js": "/websiteturk/static/js/main.f12dde05.chunk.js",
-    "main.js.map": "/websiteturk/static/js/main.f12dde05.chunk.js.map",
+    "main.js": "/websiteturk/static/js/main.d686cd4b.chunk.js",
+    "main.js.map": "/websiteturk/static/js/main.d686cd4b.chunk.js.map",
     "runtime-main.js": "/websiteturk/static/js/runtime-main.85ebe01e.js",
     "runtime-main.js.map": "/websiteturk/static/js/runtime-main.85ebe01e.js.map",
     "static/css/2.d0cac18f.chunk.css": "/websiteturk/static/css/2.d0cac18f.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.d0cac18f.chunk.css",
     "static/js/2.1207909a.chunk.js",
     "static/css/main.9799ad1f.chunk.css",
-    "static/js/main.f12dde05.chunk.js"
+    "static/js/main.d686cd4b.chunk.js"
   ]
 }
